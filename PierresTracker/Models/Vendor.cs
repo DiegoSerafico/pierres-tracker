@@ -26,8 +26,7 @@ namespace PierresTracker.Models
 
     public static List<Vendor> GetAll()
     {
-      List<Vendor> test = new List<Vendor> {};
-      return test;
+      return _allVendors;
     }
   }
 }

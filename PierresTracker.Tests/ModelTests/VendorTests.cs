@@ -23,6 +23,7 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
+      Vendor.ClearAll();
       Vendor vendorOne = new Vendor("Starbucks", "Starbucks Cafe");
       Vendor vendorTwo = new Vendor("Suzie's", "Suzie's Cafe");
       List<Vendor> testList = new List<Vendor> {vendorOne, vendorTwo};

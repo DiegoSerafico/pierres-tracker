@@ -29,6 +29,8 @@ namespace PierresTracker
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });
 
+      app.UseStaticFiles();
+
       app.Run(async (context) =>
       {
         //this line exists to help us know if there are errors:

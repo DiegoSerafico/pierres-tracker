@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Vendor.Models;
+using PierresTracker.Models;
 
 namespace PierresTracker.Controllers
 {

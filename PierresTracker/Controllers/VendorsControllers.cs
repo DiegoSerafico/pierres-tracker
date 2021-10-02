@@ -26,5 +26,12 @@ namespace PierresTracker.Controllers
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index", "Home");
     }
+
+    [HttpGet("/vendors/{vendorId}")]
+    public ActionResult Show(int vendorId)
+    {
+      Vendor vendor = Vendor.GetAll()[vendorId - 1];
+      return View(vendor);
+    }
   }
 }

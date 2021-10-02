@@ -10,6 +10,7 @@ namespace PierresTracker.Models
     public string VendorName { get; set; }
     public string VendorDescription { get; set; }
     public List<Order> Orders { get; set; }
+    public int Id { get; }
 
     public Vendor(string vendor, string description)
     {
@@ -17,6 +18,7 @@ namespace PierresTracker.Models
       VendorDescription = description;
       _allVendors.Add(this);
       Orders = new List<Order>{};
+      Id = _allVendors.Count;
     }
 
     public static void ClearAll()

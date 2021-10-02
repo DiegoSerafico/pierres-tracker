@@ -8,7 +8,7 @@
 
 @foreach (Vendor vendor in Model)
 {
-    <li>The vendor name @vendor.VendorName</li>
+    <li>The vendor name <a href="/vendors/@vendor.Id">@vendor.VendorName</a></li>
 }
 
 <p><a href="/vendors/new">Add a Vendor</a></p>

@@ -22,6 +22,8 @@ namespace PierresTracker
     }
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
+      
       app.UseRouting();
 
       app.UseEndpoints(routes =>
@@ -36,7 +38,6 @@ namespace PierresTracker
         //this line exists to help us know if there are errors:
         await context.Response.WriteAsync("Hello World!");
       });
-      app.UseDeveloperExceptionPage();
     }
   }
 }

@@ -33,5 +33,14 @@ namespace PierresTracker.Controllers
       Vendor vendor = Vendor.GetAll()[vendorId - 1];
       return View(vendor);
     }
+
+    [HttpPost("/vendors/{vendorId}/order")]
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, float orderPrice, string orderDate)
+    {
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      Vendor vendor = Vendor.GetAll()[vendorId - 1];
+      vendor.Orders.Add(newOrder);
+      return View("Show", vendor);
+    }
   }
 }

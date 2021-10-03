@@ -6,4 +6,20 @@
 
 <h1>@Model.VendorName</h1>
 
-<p>Hello World</p>
+<p>Orders:</p>
+
+@foreach (Order order in Model.Orders)
+{
+    <p>@order.Title: @order.OrderDate</p>
+    <ul>
+      <li>Description: @order.OrderDescription</li>
+      <li>Price: $@order.OrderPrice</li>
+      <li>Date: @order.OrderDate</li>
+    </ul>
+
+}
+
+<p><a href="/vendors/@Model.Id/orders/new">Add an order</a></p>
+
+<p><a href="/">Home</a></p>
+<p><a href="/vendors">Back to Vendors</a></p>

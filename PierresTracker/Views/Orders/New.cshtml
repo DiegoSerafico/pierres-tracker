@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresTracker.Models;
+
+<h1>Add an order here:</h1>
+
+<form action="/vendors/@Model.Id/order" method="post">
+  <label for="orderTitle">Title</label>
+  <input id="orderTitle" name="orderTitle" type="text" required>
+  <label for="orderDescription">Description</label>
+  <input id="orderDescription" name="orderDescription" type="text" required>
+  <label for="orderPrice">Price</label>
+  <input id="orderPrice" name="orderPrice" type="number" min="0" step="0.1f" required>
+  <label for="orderDate">Date</label>
+  <input id="orderDate" name="orderDate" type="date" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p><a href="/">Home</a></p>
+<p><a href="/vendors/@Model.Id">Back to Vendor</a></p>
